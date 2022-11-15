@@ -19,7 +19,7 @@ public class Lecture2 {
 
     System.out.println("exclusive");
 
-    IntStream.range(0, 10).forEach(System.out::println);
+    IntStream.range(0,10).forEach(System.out::println);
 
     System.out.println("inclusive");
 
@@ -31,11 +31,13 @@ public class Lecture2 {
   public void rangeIteratingLists() throws Exception {
     List<Person> people = MockData.getPeople();
 
+
     IntStream.range(0, people.size())
-        .forEach(index -> {
-          Person person = people.get(index);
-          System.out.println(person);
-        });
+            .forEach(index ->{
+              Person person = people.get(index);
+              System.out.println(person);
+            });
+
 
   }
 
