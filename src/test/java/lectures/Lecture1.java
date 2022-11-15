@@ -23,17 +23,17 @@ public class Lecture1 {
     final int limit = 10;
     int counter = 0;
 
-    for( Person person : people) {
-      if(person.getAge() <= 18) {
+    for (Person person : people){
+      if(person.getAge() <= 18){
         youngPeople.add(person);
         counter++;
-        if(counter == limit) {
+        if(counter == limit){
           break;
         }
       }
     }
 
-    for (Person young : youngPeople) {
+     for (Person young : youngPeople) {
       System.out.println(young);
     }
 
@@ -44,9 +44,9 @@ public class Lecture1 {
     ImmutableList<Person> people = MockData.getPeople();
 
     List<Person> youngPeople = people.stream()
-        .filter(person -> person.getAge() <= 18)
-        .limit(10)
-        .collect(Collectors.toList());
+            .filter(person -> person.getAge() <= 18)
+            .limit(10)
+            .collect(Collectors.toList());
 
     youngPeople.forEach(System.out::println);
 
