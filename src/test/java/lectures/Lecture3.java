@@ -30,7 +30,7 @@ public class Lecture3 {
         .max(Comparator.naturalOrder())
         .get();
 
-    assertThat(max).isEqualTo(100);
+    assertThat(max).isEqualTo(99);
     System.out.println(max);
   }
 }
